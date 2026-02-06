@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>¡Feliz Cumple Fa!</title>
+    <link rel="icon" type="image/png" href="img/cake.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/styleFa.css">
+</head>
+
+<body>
+    <audio id="musicaFondo" loop>
+        <source src="Marshmello x Jonas Brothers - Leave Before You Love Me (Official Audio).mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="musica-control">
+        <button id="btnMusica" class="btn-circular">
+            <span id="iconoMusica">🎵</span>
+        </button>
+    </div>
+    <div class="container">
+        <header class="animate__animated animate__fadeInDown">
+            <h1 class="titulo">¡Feliz Cumple Fa! <span class="flotar">🎂</span></h1>
+        </header>
+
+        <main class="card animate__animated animate__zoomIn">
+
+            <div class="texto-principal">
+                <h2>Un viaje por nuestros recuerdos...</h2>
+                <p id="maquina-escribir"></p>
+            </div>
+
+            <div class="revelar-elemento oculto">
+                <div class="foto-container">
+                    <img src="img/todos.jpeg" alt="Foto principal">
+                </div>
+            </div>
+
+            <div class="revelar-elemento oculto texto-intercalado">
+                <h3>Recordando nuestros momentos...</h3>
+                <p>Mirar atrás y ver todo lo que compartimos...¡Cuántas anécdotas en cada foto!</p>
+            </div>
+
+            <div class="revelar-elemento oculto">
+                <div class="foto-container">
+                    <img src="img/fa1.jpeg" alt="Foto 2">
+                </div>
+            </div>
+
+            <div class="revelar-elemento oculto texto-intercalado">
+                <h3>Siempre juntas!</h3>
+                <p>Gracias por estar en cada paso, por los abrazos que curan y por ser incondicional siempre.</p>
+            </div>
+
+            <div class="revelar-elemento oculto">
+                <div class="foto-container">
+                    <img src="img/fa2.jpeg" alt="Foto 3">
+                </div>
+            </div>
+
+            <div class="revelar-elemento oculto">
+                <div class="foto-container">
+                    <img src="img/fa3.jpeg" alt="Foto 4">
+                </div>
+            </div>
+
+            <div class="revelar-elemento oculto">
+                <div class="foto-container">
+                    <img src="img/fa4.jpeg" alt="Foto 5">
+                </div>
+            </div>
+
+            <div class="revelar-elemento oculto">
+                <div class="foto-container">
+                    <img src="img/primos.jpeg" alt="Foto 5">
+                </div>
+            </div>
+
+            <div class="revelar-elemento oculto">
+                <div class="foto-container">
+                    <img src="img/LasDosPeroFa.jpeg" alt="Foto 5">
+                </div>
+            </div>
+
+            <div class="revelar-elemento oculto texto-intercalado">
+                <h3>Lo mejor está por venir!</h3>
+                <p>Que este nuevo año de vida te encuentre rodeada de la gente que te ama y con esa sonrisa que ilumina todo.</p>
+            </div>
+
+            <button class="btn-mobile" id="btnCelebrar">
+                TOCÁ ACÁ, VAMOS A CELEBRAR ✨
+            </button>
+        </main>
+        <footer class="footer-personal">
+            <p>Hecho con ❤️ por Sofia</p>
+            <a href="https://www.instagram.com/QRecuerdo_ar" target="_blank" class="ig-link">
+                <span>📸</span> @QRecuerdo_ar
+            </a>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

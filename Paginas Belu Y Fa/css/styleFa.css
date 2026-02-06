@@ -1,0 +1,213 @@
+:root {
+    /* Nuevos colores: Estilo "Midnight Elegant" */
+    --color-principal: #7209b7; /* Violeta */
+    --color-secundario: #1b0094; /* Celeste Neón */
+    --color-acento: #f72585;     /* Rosa Neón */
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    /* --- GRADIENTE ATARDECER --- */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff7e5f, #86a8e7, #91eae4);
+    background-size: 400% 400%;
+    animation: atardecerAnim 15s ease infinite;
+}
+
+@keyframes atardecerAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.flotar {
+    display: inline-block;
+    animation: flotarAnim 3s ease-in-out infinite;
+}
+
+@keyframes flotarAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.container {
+    width: 95%;
+    max-width: 380px;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+.titulo {
+    /* Cambiamos a Playfair Display */
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px var(--color-secundario);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.25); /* Efecto vidrio (Glassmorphism) */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.foto-container img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.05);
+    margin-bottom: 15px;
+    /* Borde neón sutil */
+    border: 3px solid var(--color-secundario);
+    box-shadow: 0 0 15px rgba(76, 201, 240, 0.3);
+}
+
+#maquina-escribir {
+    color: #000000;
+}
+
+#maquina-escribir::after {
+    content: '|';
+    color: var(--color-secundario);
+    animation: parpadeo 0.7s infinite;
+}
+
+@keyframes parpadeo {
+    50% { opacity: 0; }
+}
+
+.btn-mobile {
+    /* Degradado neón */
+    background: linear-gradient(90deg, var(--color-principal), var(--color-acento));
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(114, 9, 183, 0.4);
+    transition: all 0.2s ease;
+}
+
+.btn-mobile:active {
+    filter: brightness(1.2);
+    transform: scale(0.96);
+}
+
+.oculto {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.texto-intercalado {
+    margin: 30px 0;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.texto-intercalado h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--color-secundario);
+    margin-bottom: 10px;
+}
+
+.texto-intercalado p {
+    color: #000000;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Esto cambia el color del h2 y el p dentro de la clase texto-principal */
+.texto-principal h2 {
+    color: #000000; /* Blanco puro */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Un brillo sutil para que resalte */
+}
+
+.texto-principal p {
+    color: #000000; /* Un gris muy clarito para el texto de la máquina de escribir */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- BOTÓN DE MÚSICA ABAJO A LA DERECHA --- */
+.musica-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-circular {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-circular:active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Footer sutil */
+.footer-personal {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-personal p {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.ig-link {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 700;
+}
